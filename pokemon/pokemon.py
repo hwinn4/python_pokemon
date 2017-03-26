@@ -16,10 +16,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   url = set_url()
+  response = requests.get(url)
 
-  r = requests.get(url)
-
-  r_json = json.loads(r.text)
+  r_json = json.loads(response.text)
   data = build_data(r_json)
 
   return render_template('pokemon.html', pokemon=data)
