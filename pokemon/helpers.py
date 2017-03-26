@@ -1,3 +1,5 @@
+import random
+
 def build_data(response):
   data = {}
 
@@ -6,3 +8,7 @@ def build_data(response):
   data['image_url'] = response['sprites']['front_default']
 
   return data
+
+def set_url():
+  num = random.randint(1, 25)
+  return 'http://pokeapi.co/api/v2/pokemon/' + str(num)

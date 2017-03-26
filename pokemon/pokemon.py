@@ -13,7 +13,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  r = requests.get('http://pokeapi.co/api/v2/pokemon/8')
+  url = set_url()
+
+  r = requests.get(url)
+
   r_json = json.loads(r.text)
   data = build_data(r_json)
+
   return json.dumps(data)
