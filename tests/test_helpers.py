@@ -11,3 +11,9 @@ class TestHelpers():
                       }
 
     assert build_data(sample_response) == result
+
+  def test_set_url(self):
+    nums = range(0, 75)
+    result = set_url()
+    num_arg = int(result.split('/')[-1])
+    assert num_arg in nums
