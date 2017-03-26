@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h3>Name : {{ pokemon['name'].capitalize() }}</h3>
+  <h4>Weight: {{ pokemon['weight'] }}</h4>
+  <img src="{{ pokemon['image_url'] }}" alt="{{ pokemon['name'] }}">
+{% endblock %}

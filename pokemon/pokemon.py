@@ -1,5 +1,7 @@
+import os
+
 # import Flask class
-from flask import Flask
+from flask import Flask, render_template
 
 # import all functions from helpers
 from helpers import *
@@ -20,4 +22,4 @@ def index():
   r_json = json.loads(r.text)
   data = build_data(r_json)
 
-  return json.dumps(data)
+  return render_template('pokemon.html', pokemon=data)
