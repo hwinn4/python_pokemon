@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
-  <h3>Name : {{ pokemon['name'].capitalize() }}</h3>
-  <h4>Weight: {{ pokemon['weight'] }}</h4>
-  <img src="{{ pokemon['image_url'] }}" alt="{{ pokemon['name'] }}">
+  <h3>Name : {{ pokemon.name.capitalize() }}</h3>
+  <h5>{{ pokemon.name_len() }}</h5>
+  <h4>Weight: {{ pokemon.weight }}</h4>
+  <h5>Weight divided by 2: {{ pokemon.weight_halved() }}</h5>
+  <img src="{{ pokemon.image_url }}" alt="{{ pokemon['name'] }}">
 {% endblock %}

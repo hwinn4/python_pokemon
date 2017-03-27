@@ -5,6 +5,7 @@ from flask import Flask, render_template
 
 # import all functions from helpers
 from helpers import *
+from pokemon_class import *
 
 # import libraries
 import requests
@@ -19,6 +20,6 @@ def index():
   response = requests.get(url)
 
   r_json = json.loads(response.text)
-  data = build_data(r_json)
+  new_pokemon = Pokemon(r_json)
 
-  return render_template('pokemon.html', pokemon=data)
+  return render_template('pokemon.html', pokemon=new_pokemon)

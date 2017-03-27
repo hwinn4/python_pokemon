@@ -1,1 +1,2 @@
 graft pokemon/templates
+graft pokemon/models
