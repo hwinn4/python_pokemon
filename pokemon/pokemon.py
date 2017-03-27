@@ -3,7 +3,7 @@ import os
 # import Flask class
 from flask import Flask, render_template
 
-# import all functions from helpers
+# import other files
 from helpers import *
 from pokemon_class import *
 
